@@ -1,0 +1,1 @@
+web: gunicorn council.wsgi --log-file -

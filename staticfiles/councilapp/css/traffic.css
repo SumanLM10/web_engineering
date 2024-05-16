@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: none;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+.intro-section {
+    background-color: #ecf0f1;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.intro-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-inner h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.content {
+    padding: 40px 0;
+}
+
+.content-inner {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #2c3e50;
+}
+
+.content-inner h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.content-inner p {
+    font-size: 16px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+.button-blue {
+    background-color: #3498db;
+}
+
+.button-blue:hover {
+    background-color: #2980b9;
+}
+
+.button-green {
+    background-color: #2ecc71;
+}
+
+.button-green:hover {
+    background-color: #27ae60;
+}
+
+.button-red {
+    background-color: #e74c3c;
+}
+
+.button-red:hover {
+    background-color: #c0392b;
+}
+
+.button-yellow {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+.button-yellow:hover {
+    background-color: #f39c12;
+}

@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>council website</title>
+    <link href="{% static 'councilapp/css/home.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'councilapp/images/new_logo.png' %}" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="{% static 'councilapp/js/index.js' %}"></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <img class= "brand-logo" src="{% static 'images/new_logo.png' %}" alt="council_logo">
+                <a href="{% url 'councilapp:home' %}"><h2 style="color: aliceblue; float: left; margin-left: 10px;">Dhulikhel City Council</h2></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'councilapp:home' %}" class="active"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                    <li><a href="{% url 'councilapp:about' %}"><i class="fas fa-info-circle"></i> About</a></li> 
+                    <li><a href="{% url 'councilapp:create' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+                    <li><a href="{% url 'councilapp:login' %}"><i class="fa fa-fw fa-user"></i> Login</a></li>
+                    <li><a href="{% url 'councilapp:register' %}"><i class="fas fa-user-plus"></i>  Register</a></li>
+                    <li style="float: left;" class="search-bar">
+                      <form action="#" method="get">
+                        <input style="width: fit-content;" type="text" placeholder="Search..." name="search">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                      </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+      <section class="intro-section">
+        <div class="intro-inner">
+            <h2>Welcome to Dhulikhel City Council</h2>
+            <p>Explore our services and find information about various aspects of living in Dhulikhel.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="service-grid">
+            <div class="service-box" style="background-color: #efb812;">
+                <h3>Council Tax</h3>
+                <p>Learn about council tax rates, payments, and exemptions.</p>
+                <a href="{% url 'councilapp:tax' %}" class="button button-primary">Learn More</a>
+            </div>
+            <div class="service-box" style="background-color: #0e8cca;">
+                <h3>Road and Parking</h3>
+                <p>Find information about road maintenance, parking regulations, and permits.</p>
+                <a href="{% url 'councilapp:road' %}" class="button button-secondary">Learn More</a>
+            </div>
+            <div class="service-box" style="background-color: #19b023;">
+                <h3>Birth, Marriages, and Death</h3>
+                <p>Access birth registration, marriage licenses, and death certificates services.</p>
+                <a href="{% url 'councilapp:birth' %}" class="button button-tertiary">Learn More</a>
+            </div>
+            <div class="service-box" style="background-color: #d23e11;">
+                <h3>Business and Licencing</h3>
+                <p>Information on business permits, licenses, and regulations.</p>
+                <a href="{% url 'councilapp:business' %}" class="button button-quaternary">Learn More</a>
+            </div>
+            <div class="service-box" style="background-color: #a811ca;">
+                <h3>Waste and Recycling</h3>
+                <p>Learn about waste collection schedules, recycling programs, and disposal guidelines.</p>
+                <a href="{% url 'councilapp:waste' %}" class="button button-quinary">Learn More</a>
+            </div>
+            <div class="service-box" style="background-color: #9a2348;">
+                <h3>School and Learning</h3>
+                <p>Find information about schools, educational resources, and learning programs.</p>
+                <a href="{% url 'councilapp:school' %}" class="button button-senary">Learn More</a>
+            </div>
+            <div class="service-box" style="background-color: #4a228f;">
+                <h3>Housing Services</h3>
+                <p>Information on housing assistance, affordable housing programs, and property regulations.</p>
+                <a href="{% url 'councilapp:housing' %}" class="button button-septenary">Learn More</a>
+            </div>
+            <div class="service-box" style="background-color: rgb(139, 139, 29)">
+                <h3>Benefits and Support</h3>
+                <p>Find information about social benefits, welfare programs, and support services.</p>
+                <a href="{% url 'councilapp:benefits' %}" class="button button-octonary">Learn More</a>
+            </div>
+            <div class="service-box" style="background-color: #805a20;">
+                <h3>Cultural Heritages</h3>
+                <p>Explore cultural landmarks, heritage sites, and historical preservation efforts.</p>
+                <a href="{% url 'councilapp:cultural' %}" class="button button-nonary">Learn More</a>
+            </div>
+            <div class="service-box" style="background-color: #2982b2;">
+                <h3>Traffic Rules</h3>
+                <p>Learn about traffic regulations, road safety, and driving guidelines.</p>
+                <a href="{% url 'councilapp:traffic' %}" class="button button-denary">Learn More</a>
+            </div>
+            <div class="service-box" style="background-color: rgb(171, 39, 39)">
+                <h3>Water and Electricity</h3>
+                <p>Information on water supply, electricity services, and utility billing.</p>
+                <a href="{% url 'councilapp:water' %}" class="button button-undenary">Learn More</a>
+            </div>
+            <div class="service-box" style="background-color: rgb(34, 170, 34);">
+                <h3>Health Services</h3>
+                <p>Access healthcare facilities, medical services, and public health programs.</p>
+                <a href="{% url 'councilapp:health' %}" class="button button-duodenary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>Email: info@dhulikhelcitycouncil.gov</p>
+                <p>Phone: +977-123-456789</p>
+                <p>Address: Dhulikhel, Kavre, Nepal</p>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Instagram</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 Dhulikhel City Council. All rights reserved.</p>
+    </footer>
+</body>
+</html>

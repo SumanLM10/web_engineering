@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>council website</title>
+    <link href="{% static 'councilapp/css/home.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'councilapp/images/new_logo.png' %}" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="councilapp/js/index.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <img class= "brand-logo" src="{% static 'images/new_logo.png' %}" alt="council_logo">
+                <a href="{% url 'councilapp:home' %}"><h2 style="color: aliceblue; float: left; margin-left: 10px;">Dhulikhel City Council</h2></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'councilapp:home' %}" class="active"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                    <li><a href="{% url 'councilapp:about' %}"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="{% url 'councilapp:create' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+                    <li><a href="{% url 'councilapp:login' %}"><i class="fa fa-fw fa-user"></i> Login</a></li>
+                    <li><a href="{% url 'councilapp:register' %}"><i class="fas fa-user-plus"></i>  Register</a></li>
+                    <li style="float: left;" class="search-bar">
+                      <form action="#" method="get">
+                        <input style="width: fit-content;" type="text" placeholder="Search..." name="search">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                      </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+      <div class="container">
+            <h2>Contact Us</h2>
+
+            <p>If you have any questions or concerns, please feel free to contact us using the form below:</p>
+
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                    <div>
+                        <label for="{{form.name.id_for_label}}">Name:</label>
+                        {{ form.name }}
+                        <span style="color: red; font-size: small;">
+                          {{ form.name.errors }}
+                        </span>
+                      </div>
+                        
+                        <div>
+                          <label for="{{form.email.id_for_label}}">Email:</label>
+                          {{ form.email }}
+                          <span style="color: red; font-size: small;">
+                            {{ form.email.errors }}
+                          </span>
+                        </div>
+              
+                        <div>
+                          <label for="{{form.messages.id_for_label}}">Messages:</label>
+                          {{form.messages}}
+                          <span style="color: red; font-size: small;">
+                            {{form.messages.errors}}
+                          </span>
+                        </div>  
+                <div>
+                    <button type="submit">Send</button>
+                </div>
+                <br>
+      </form>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+          <div class="footer-col">
+              <h3>Contact Us</h3>
+              <p>Email: info@dhulikhelcitycouncil.gov</p>
+              <p>Phone: +977-123-456789</p>
+              <p>Address: Dhulikhel, Kavre, Nepal</p>
+          </div>
+          <div class="footer-col">
+              <h3>Follow Us</h3>
+              <p>Facebook</p>
+              <p>Twitter</p>
+              <p>Instagram</p>
+          </div>
+          <div class="footer-col">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Events</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+              </ul>
+          </div>
+      </div>
+      <p class="copyright">&copy; 2024 Dhulikhel City Council. All rights reserved.</p>
+  </footer>
+</body>
+</html>

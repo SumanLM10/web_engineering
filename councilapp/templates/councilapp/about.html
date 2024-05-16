@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>council website</title>
+    <link href="{% static 'councilapp/css/about.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'councilapp/images/new_logo.png' %}" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="councilapp/js/index.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <img class= "brand-logo" src="{% static 'images/new_logo.png' %}" alt="council_logo">
+                <a href="{% url 'councilapp:home' %}"><h2 style="color: aliceblue; float: left; margin-left: 10px;">Dhulikhel City Council</h2></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'councilapp:home' %}" class="active"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                    <li><a href="{% url 'councilapp:about' %}"><i class="fas fa-info-circle"></i> About</a></li> 
+                    <li><a href="{% url 'councilapp:create' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+                    <li><a href="{% url 'councilapp:login' %}"><i class="fa fa-fw fa-user"></i> Login</a></li>
+                    <li><a href="{% url 'councilapp:register' %}"><i class="fas fa-user-plus"></i>  Register</a></li>
+                    <li style="float: left;" class="search-bar">
+                      <form action="#" method="get">
+                        <input style="width: fit-content;" type="text" placeholder="Search..." name="search">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                      </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="about-inner">
+            <h2>About Dhulikhel City Council</h2>
+            <p>Welcome to the Dhulikhel City Council. We are dedicated to providing excellent public services to the residents of Dhulikhel. Our goal is to enhance the quality of life in our community through effective governance, sustainable development, and inclusive public services.</p>
+            
+            <h3>Our Vision</h3>
+            <p>To be a leading city council that fosters community well-being, economic prosperity, and environmental sustainability.</p>
+            
+            <h3>Our Mission</h3>
+            <p>To deliver high-quality services that meet the needs of our residents, support local businesses, and protect our natural environment.</p>
+            
+            <h3>Our Values</h3>
+            <ul>
+                <li>Integrity: We act with honesty and transparency in all our dealings.</li>
+                <li>Accountability: We are accountable to our community and stakeholders.</li>
+                <li>Inclusivity: We value diversity and strive to include all voices in our decision-making processes.</li>
+                <li>Sustainability: We are committed to sustainable practices that protect our environment for future generations.</li>
+            </ul>
+            
+            <h3>Our History</h3>
+            <p>Dhulikhel City Council was established in [Year]. Since then, we have been working tirelessly to improve the lives of our residents through various initiatives and projects. From infrastructure development to social services, our efforts are focused on creating a thriving community.</p>
+            
+            <h3>Meet the Team</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/team-member1.jpg" alt="Team Member 1">
+                    <h4>John Doe</h4>
+                    <p>Mayor</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/team-member2.jpg" alt="Team Member 2">
+                    <h4>Jane Smith</h4>
+                    <p>Chief Executive Officer</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/team-member3.jpg" alt="Team Member 3">
+                    <h4>Robert Brown</h4>
+                    <p>Director of Public Services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>Email: info@dhulikhelcitycouncil.gov</p>
+                <p>Phone: +977-123-456789</p>
+                <p>Address: Dhulikhel, Kavre, Nepal</p>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">Twitter</a></p>
+                <p><a href="#">Instagram</a></p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 Dhulikhel City Council. All rights reserved.</p>
+    </footer>
+</body>
+</html>
